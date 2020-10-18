@@ -9,17 +9,29 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
 
     <title>Coffee Shop</title>
   </head>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+
+    <!--Order Online Button-->
+    <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
+      <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="tooltip" data-placement="left" data-html="true" title="Or call us at <br /><strong>1-123-456-7890</strong>">Order Online</a>
+    </div>
+
+    <!--Navigation with logo and title-->
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 mx-4 navbarin">
+        <a class="logo navbar-brand" href="index.html">
+          <img src="img/logo.webp" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Roasters & Toasters
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="featured.html">Featured</a>
             <a class="nav-item nav-link" href="menu.html">Menu</a>
@@ -30,46 +42,81 @@
       </nav>
   </header>
 
-  <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <body class="background">
+    <div class="jumbotron mt-n4 text-white text-center">
+        <h1 class="display-4 pt-4">Roasters & Toasters</h1>
+        <p class="lead">Experience our coffee in anyway you like, from black to latte and everything inbetween</p>
+        <hr/>
+        <a class="mainButtons btn btn-lg mt-4" href="#" role="button">Check Out our Menu</a>
     </div>
-  
-    <Footer>
+
+    <!--Newsletter signup-->
+    <div class="container-fluid newsletter text-white text-center">
+      <section class="text-center p-2 mt-4">
+        <div class="container p-3">
+          <h3 class="text-white">Sign Up For Our Newsletter</h3>
+          <form action="#" method="Post">
+            <input type="text" name="text" placeholder="Email Address" class="form-control col-md-4 offset-md-4">
+            <button type="button" class="btn mainButtons mt-3">Subscribe<i class="fa fa-envelope pl-1"></i></button>
+          </form>
+        </div>
+      </section>
+    </div>
+    
+    <!--footer-->
+    <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-4 justify-content-center">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="featured.html">Featured</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="contactus.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-4 text-center">
-            <a class="btn btn-social-icon btn-instagram" href="http://instagram.com"><i class="fa fa-instagram"></i></a>
-            <a class="btn btn-social-icon btn-facebook" href="http://facebook.com"><i class="fa fa-facebook"></i></a>
-            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com"><i class="fa fa-twitter"></i></a>
-            <a class="btn btn-social-icon btn-yelp" href="http://yelp.com"><i class="fa fa-yelp"></i></a>
-          </div>
-
-          <div class="col-4 ">
-            <a role="button" class="btn btn-link" href="tel:+11234567890"><i class="fa fa-phone"></i>123-456-7890</a><br/>
-            <a role="button" class="btn btn-link text-right" href="mailto:owner@roastersandtoasters.com"><i class="fa fa-envelope"></i>owner@roastersandtoasters.com</a>
-          </div>
-
+          <div class="row ">
+              <div class="col-md-4 text-center text-md-left ">
+                  
+                  <div class="py-0">
+                      <h3 class="my-4 text-white"><span class="mx-2 font-italic text-warning">Roasters & Toasters</span></h3>
+                      <p class="footer-links font-weight-bold">
+                          <a class="text-white" href="index.html">Home</a>
+                          |
+                          <a class="text-white" href="featured.html">Featured</a>
+                          |
+                          <a class="text-white" href="menu.html">Menu</a>
+                          |
+                          <a class="text-white" href="aboutus.html">About</a>
+                          |
+                          <a class="text-white" href="#">Contact</a>
+                      </p>
+                  </div>
+              </div>
+              
+              <div class="col-md-4 text-white text-center text-md-left ">
+                  <div class="py-2 my-4">
+                      <div>
+                          <p class="text-white"> <i class="fa fa-map-marker mx-2 "></i>
+                                123 Boca Way, Boca Raton, FL 33434</p>
+                      </div>
+                      <div> 
+                          <p><i class="fa fa-phone  mx-2"></i><a href="tel:+11234567890">1-123-456-7890</a></p>
+                      </div>
+                      <div>
+                          <p><i class="fa fa-envelope  mx-2"></i><a href="mailto:support@roastersandtoasters">support@roastersandtoasters</a></p>
+                      </div>  
+                  </div>  
+              </div>
+              <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                  <span class=" font-weight-bold ">About the Company</span>
+                  <p class="text-warning my-2" >Founded in 2014, we offer the best coffee on the east coast. Come check us out and say hi!</p>
+                  <div class="py-2">
+                      <a href="#"><i class="fa fa-facebook fa-2x text-primary mx-3"></i></a>
+                      <a href="#"><i class="fa fa-yelp fa-2x text-danger mx-3"></i></a>
+                      <a href="#"><i class="fa fa-twitter fa-2x text-info mx-3"></i></a>
+                      <a href="#"><i class="fa fa-instagram fa-2x text-danger mx-3"></i></a>
+                  </div>
+              </div>
+          </div> 
           <div class="row">
             <div class="col text-center">
-              &copy; Alex Abbamondi 2020
+              <p class="text-light py-4 mb-4">&copy;2020 Alex Abbamondi</p>
             </div>
-          </div>
-    </Footer>
+          </div> 
+      </div>
+   </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
