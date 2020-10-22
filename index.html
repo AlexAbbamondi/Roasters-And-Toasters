@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Coffee Shop</title>
   </head>
 
+  <body class="background">
   <header>
     <!--Order Online Button-->
     <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
-      <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="tooltip" data-placement="left" data-html="true" title="Or call us at <br /><strong>1-123-456-7890</strong>">Order Online</a>
+      <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="modal" data-target="#orderModal" data-placement="left" data-html="true">Order Online</a>
     </div>
 
 
     <!--Navigation with logo and title-->
     <nav class="navbar navbar-expand-lg navbar-dark mt-3 mx-4 navbarin">
         <a class="logo navbar-brand" href="index.html">
-          <img src="img/logo.webp" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          <img src="/img/logo.webp" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
           Roasters & Toasters
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +44,80 @@
     </nav>
   </header>
 
-  <body class="background">
+    <!--Order Modal-->
+    <div id="orderModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Online Order Form</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter a name for the order">
+                  </div>
+                  <div class="form-check col-12">
+                    <label for="hotCoffee">Hot Coffee</label>
+                    <select class="form-control col-2" id="hotCoffee">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </div>
+                      <div class="form-check col-12">
+                        <input type="checkbox" class="form-check-input" id="milk">
+                        <label class="form-check-label" for="milk">Milk</label>
+                      </div>
+                      <div class="form-check col-12">
+                        <input type="checkbox" class="form-check-input" id="sugar">
+                        <label class="form-check-label" for="sugar">Sugar</label>
+                      </div>
+                      <div class="form-check col-12">
+                        <label for="icedCoffee">Iced Coffee</label>
+                        <select class="form-control col-2" id="icedCoffee">
+                          <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      </div>
+                        <div class="form-check col-12">
+                          <input type="checkbox" class="form-check-input" id="milk">
+                          <label class="form-check-label" for="milk">Milk</label>
+                        </div>
+                        <div class="form-check col-12">
+                          <input type="checkbox" class="form-check-input" id="sugar">
+                          <label class="form-check-label" for="sugar">Sugar</label>
+                        </div>
+                  <div class="form-check col-12">
+                    <label for="coldBrew">Cold Brew</label>
+                    <select class="form-control col-2" id="coldBrew">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                  </div>
+                        <div class="form-check col-12">
+                          <input type="checkbox" class="form-check-input" id="milk">
+                          <label class="form-check-label" for="milk">Milk</label>
+                        </div>
+                        <div class="form-check col-12">
+                          <input type="checkbox" class="form-check-input" id="sugar">
+                          <label class="form-check-label" for="sugar">Sugar</label>
+                        </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--Jumbotron-->
     <div class="jumbotron mt-n4 text-white text-center">
@@ -197,11 +271,24 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    <script>
-      $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+  
+   <script>
+     
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".milkSugar").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".milkSugar").hide();
+            }
+        });
+    }).change();
+});
+
+   </script>
+  
   </body>
 </html>

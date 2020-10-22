@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Coffee Shop</title>
   </head>
 
+  <body class="background">
   <header>
     <!--Order Online Button-->
     <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
@@ -43,7 +44,7 @@
   </header>
 
   <!--Jumbotron-->
-  <body class="background">
+
     <div class="jumbotron mt-n4 text-white text-center">
         <h1 class="display-4 pt-4">Roasters & Toasters</h1>
         <p class="lead">Experience our coffee in anyway you like, from black to latte and everything inbetween</p>
@@ -55,10 +56,9 @@
     <!-- Trigger the Modal -->
     <img class="img-fuild pr-3 pl-3 pl-md-0 pr-md-0 pb-5 mx-auto d-md-block d-none" id="myImg" src="img/coffeeChart.jpg" alt="Coffee Chart" style="width:100%;max-width:600px">
     <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+    <div id="myModal" class="modal modalChart">
+      <span class="close">&times;</span> 
+      <img class="modal-content modalContent" id="img01">
     </div> 
 
     <!--Menu-->
