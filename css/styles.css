@@ -63,6 +63,13 @@ footer {
 .img-responsive {
   border-radius: 5px; }
 
+.menuBackground {
+  background-color: #dbc1ac; }
+
+.menuImage {
+  padding-left: 0;
+  padding-right: 0; }
+
 .carousel {
   border: solid #967259; }
 

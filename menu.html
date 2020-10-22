@@ -64,6 +64,94 @@
     <!--Menu-->
     <h1 class="welcomeText text-center">Our Menu</h1>
 
+    <div class="container-fluid pt-4 pb-sm-0">
+      <div class="row ">
+        <div class="col col-md-7 pb-4 menuBackground">
+
+          <h1 class="welcomeText text-center pt-5">Coffees</h1>
+
+          <div class="row pt-4">
+            <div class="col-12 col-md-6">
+              <h3>Drip Coffee $2.00</h3>
+              <p class="mt-n4">Slow Drip Coffee</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>Iced Coffee $2.00</h3>
+              <p class="mt-n4">Any Size</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3>Espresso $2.00</h3>
+              <p class="mt-n4">2 oz</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>Americano $2.00</h3>
+              <p class="mt-n4">Espresso + H20</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3>Cold Brew $2.00</h3>
+              <p class="mt-n4">Ground beans soaked and drip for 12 hours</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>Nitro Cold Brew $2.00</h3>
+              <p class="mt-n4">Ground beans soaked and drip for 12 hours</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3>Cappucino $2.00</h3>
+              <p class="mt-n4">2 oz espresso + steamed milk + foam</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>Latte $2.00</h3>
+              <p class="mt-n4">2 oz espresso + steamed milk</p>
+            </div>
+          </div>
+
+          <h1 class="welcomeText text-center pt-4">Specialties</h1>
+
+          <div class="row pt-4">
+            <div class="col-12 col-md-6">
+              <h3>Hot Tea $2.00</h3>
+              <p class="mt-n4">house Brew Tea</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>Hot Cocoa $2.00</h3>
+              <p class="mt-n4">Premium cocoa brewed hot to perfection</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3>Chia Tea Latte $2.00</h3>
+              <p class="mt-n4">house Brew Tea</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h3>London Fog $2.00</h3>
+              <p class="mt-n4">Earl grey tea + milk</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="col-5 align-self-center d-none d-sm-block menuImage">
+          <img src="img/menu.jpg" class="specialImage" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
     <!--Newsletter signup-->
     <div class="container-fluid newsletter text-white text-center">
       <section class="text-center p-2 mt-4">
@@ -138,28 +226,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
-  <script>
-    //For coffee chart image zoom
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    }
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    } 
-  </script>
+  <script src="js/scripts.js"></script>
   </body>
 </html>
