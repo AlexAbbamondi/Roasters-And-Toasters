@@ -25,7 +25,7 @@ hr {
 .background {
   background-color: #ece0d1; }
 
-.card-header {
+.card-header, .modal-header {
   background-color: #967259; }
 
 .newsletter {
@@ -58,7 +58,7 @@ footer {
 
 .orderButton:hover {
   background-color: #dbc1ac;
-  border: 1px solid #634832; }
+  border: solid 2px #967259; }
 
 .img-responsive {
   border-radius: 5px; }
@@ -71,7 +71,8 @@ footer {
   padding-right: 0; }
 
 .carousel {
-  border: solid #967259; }
+  border: solid 2px #967259;
+  padding: 10px; }
 
 .welcomeText {
   color: #634832; }
@@ -84,6 +85,10 @@ footer {
   border-radius: 50%;
   width: 200px;
   height: 250px; }
+
+.aboutus {
+  border: solid 2px #967259;
+  padding: 10px; }
 
 /* Style the Image Used to Trigger the Modal */
 #myImg {

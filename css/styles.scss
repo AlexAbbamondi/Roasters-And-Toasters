@@ -9,6 +9,10 @@ $color-closehighlight: #bbb;
 $header-font: 'Lemonada', cursive;
 $body-font: 'Roboto', sans-serif;
 
+@mixin pic-border {
+    border: solid 2px $color-lightbrown;
+}
+
 h1, h2, h3, .logo{
     font-family: $header-font;
 }
@@ -42,7 +46,7 @@ hr {
     background-color: $color-lightcream;
 }
 
-.card-header {
+.card-header, .modal-header {
     background-color: $color-lightbrown;
 }
 
@@ -82,7 +86,7 @@ footer {
 
 .orderButton:hover {
     background-color: $color-cream;
-    border: 1px solid $color-brown;
+    @include pic-border;
 }
 
 .img-responsive {
@@ -100,7 +104,8 @@ footer {
 
 
 .carousel {
-    border: solid $color-lightbrown;
+    @include pic-border;
+    padding: 10px;
 }
 
 .welcomeText {
@@ -116,6 +121,11 @@ footer {
     border-radius: 50%;
     width: 200px;
     height: 250px;
+}
+
+.aboutus {
+    @include pic-border;
+    padding: 10px;
 }
 
  /* Style the Image Used to Trigger the Modal */
