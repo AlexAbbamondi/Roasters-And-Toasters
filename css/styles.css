@@ -1,10 +1,20 @@
-h1, h2, h3, .logo {
+h1, h2, .logo {
   font-family: "Lemonada", cursive; }
 
-.card-body, p {
+h3 {
+  padding-bottom: 20px;
+  font-family: "Lemonada", cursive; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .card .card-body {
+    font-family: "Roboto", sans-serif; }
+
+p {
   font-family: "Roboto", sans-serif; }
 
 .navbarin {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #634832;
   border-radius: 5px; }
 
@@ -37,9 +47,6 @@ hr {
   background-repeat: no-repeat;
   background-size: cover; }
 
-h3 {
-  padding-bottom: 20px; }
-
 footer {
   background-color: #2c292f;
   padding-top: 25px;
@@ -53,6 +60,7 @@ footer {
   color: white; }
 
 .orderButton {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #634832;
   color: white; }
 
@@ -81,12 +89,24 @@ footer {
   width: 100%;
   height: auto; }
 
+.rotate {
+  -ms-transform: rotate(-6deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-6deg);
+  /* Safari */
+  transform: rotate(-6deg); }
+
+@media (max-width: 480px) {
+  .rotate {
+    display: none; } }
+
 .meetUs {
   border-radius: 50%;
   width: 200px;
   height: 250px; }
 
 .aboutus {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: solid 2px #967259;
   padding: 10px; }
 
@@ -169,3 +189,10 @@ footer {
   height: 100%;
   width: 100%;
   position: absolute; }
+
+.discountModal {
+  background-image: url("/img/coffeeModal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }

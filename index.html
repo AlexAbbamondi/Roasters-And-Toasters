@@ -18,10 +18,11 @@
   <body class="background">
   <header>
     <!--Order Online Button-->
-    <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
-      <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="modal" data-target="#orderModal" data-placement="left" data-html="true">Order Online</a>
+    <div class="row">
+      <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
+        <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="modal" data-target="#orderModal" data-placement="left" data-html="true">Order Online</a>
+      </div>
     </div>
-
 
     <!--Navigation with logo and title-->
     <nav class="navbar navbar-expand-lg navbar-dark mt-3 mx-4 navbarin">
@@ -57,13 +58,13 @@
               <form>
                 <div class="form-row">
                   <div class="col">
-                    <div class="form-group col-12">
+                    <div class="form-group">
                       <label for="name">First Name</label>
                       <input type="text" class="form-control" id="name" placeholder="First Name">
                     </div>
                   </div>
                   <div class="col">
-                    <div class="form-group col-12">
+                    <div class="form-group">
                       <label for="phoneNumber">Phone Number</label>
                       <input type="text" class="form-control" id="phoneNumber" placeholder="phone number">
                     </div>
@@ -101,47 +102,64 @@
                       </select>
                     </div>
                   </div>
-                  </div>
-                  <h3 class="pt-3 mb-n1">payment info</h3>
+                </div>
+
+                  <a href="" class="text-primary">+Add another item</a>
+
+                  <h3 class="pt-3 mb-n1">Payment Info</h3>
                   <div class="form-row">
-                    <div class="col-6 form-group">
+                    <div class="col form-group">
+                      <label for="fullName">Full Name</label>
+                      <input type="text" class="form-control" id="FullName" placeholder="Full Name">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col form-group">
                       <label for="creditCard">CC Number</label>
-                      <input type="text" class="form-control" id="creditCard" placeholder="1111 1111 1111 1111">
+                      <input type="text" class="form-control" id="creditCard" placeholder="CC Number">
                     </div>
-                    <div class="col-4 form-group">
-                      <label for="ccType">Card Type</label>
-                      <select class="form-control" id="ccType">
-                        <option>Visa</option>
-                        <option>Mastercard</option>
-                        <option>American Express</option>
-                        <option>Discovery</option>
-                      </select>
+                  </div>
+                  <div class="form-row">
+                    <div class="col form-group">
+                      <label for="date">Expiration Date</label>
+                      <input type="text" class="form-control" id="date" placeholder="01/20">
                     </div>
-                    <div class="col-2 form-group">
+                    <div class="col form-group">
                       <label for="cvv">CVV</label>
                       <input type="text" class="form-control" id="cvv" placeholder="CVV">
                     </div>
                   </div>
-
+                  <h3 class="pt-2 mb-n1">Discount Code</h3>
                   <div class="form-row">
-                    <div class="col form-group">
-                      <label for="month">Expiration Month</label>
-                      <input type="text" class="form-control" id="month" placeholder="01">
+                    <div class="col-6">
+                      <input type="text" class="form-control" id="code" placeholder="Code">
                     </div>
-                    <div class="col form-group">
-                      <label for="year">Expiration Year</label>
-                      <input type="text" class="form-control" id="year" placeholder="22">
-                    </div>
-                    
                   </div>
-                </div>
               </form>
-              <button type="submit" class="btn btn-primary">Submit Order</button>
+              <button type="submit" class="btn btn-primary pull-right mt-3">Submit Order</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!--Discount Modal pop-up on load-->
+    <div id="discountModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-white">Discount</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body discountModal">
+            <div class="container-fluid">
+              <h3 class="text-center text-white pt-4">10% off your first order</h3>
+              <h4 class="text-center text-white pb-4"><strong>Use code: </strong><span class="bg-info p-1">10PERCENT</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>           
 
     <!--Jumbotron-->
     <div class="jumbotron mt-n4 text-white text-center">
@@ -228,7 +246,7 @@
         <div class="container p-3">
           <h3 class="text-white">Sign Up For Our Newsletter</h3>
           <form action="#" method="Post">
-            <input type="text" name="text" placeholder="Email Address" class="form-control col-md-4 offset-md-4">
+            <input type="text" name="text" placeholder="Email Address" class="form-control col-md-4 offset-md-4" required>
             <button type="button" class="btn mainButtons mt-3">Subscribe<i class="fa fa-envelope pl-1"></i></button>
           </form>
         </div>
@@ -295,6 +313,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -19,8 +19,10 @@
   <body class="background">
   <header>
     <!--Order Online Button-->
-    <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
-      <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="tooltip" data-placement="left" data-html="true" title="Or call us at <br /><strong>1-123-456-7890</strong>">Order Online</a>
+    <div class="row">
+      <div class="col-12 col-md-11 d-flex justify-content-center justify-content-md-end">
+        <a href="#" class="orderButton btn float-right mt-4" role="button" data-toggle="modal" data-target="#orderModal" data-placement="left" data-html="true">Order Online</a>
+      </div>
     </div>
 
     <!--Navigation with logo and title-->
@@ -44,7 +46,102 @@
       </nav>
   </header>
 
-
+<!--Order Modal-->
+<div id="orderModal" class="modal fade" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title text-white">Online Order Form</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="form-row">
+              <div class="col">
+                <div class="form-group col-12">
+                  <label for="name">First Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="First Name">
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group col-12">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" class="form-control" id="phoneNumber" placeholder="phone number">
+                </div>
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="drink">Select Drink:</label>
+                  <select class="form-control" id="drink">
+                    <option>Select</option>
+                    <option>Drip Coffee</option>
+                    <option>Iced Coffee</option>
+                    <option>Espresso</option>
+                    <option>Americano</option>
+                    <option>Cold Brew</option>
+                    <option>Nitro Cold Brew</option>
+                    <option>Cappucino</option>
+                    <option>Latte</option>
+                    <option>Hot Tea</option>
+                    <option>Hot Cocoa</option>
+                    <option>Chia Tea Latte</option>
+                    <option>London Fog</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="selSize">Select Size:</label>
+                  <select class="form-control" id="selSize">
+                    <option>Size</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+              <h3 class="pt-3 mb-n1">payment info</h3>
+              <div class="form-row">
+                <div class="col-6 form-group">
+                  <label for="creditCard">CC Number</label>
+                  <input type="text" class="form-control" id="creditCard" placeholder="1111 1111 1111 1111">
+                </div>
+                <div class="col-4 form-group">
+                  <label for="ccType">Card Type</label>
+                  <select class="form-control" id="ccType">
+                    <option>Visa</option>
+                    <option>Mastercard</option>
+                    <option>American Express</option>
+                    <option>Discovery</option>
+                  </select>
+                </div>
+                <div class="col-2 form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col form-group">
+                  <label for="month">Expiration Month</label>
+                  <input type="text" class="form-control" id="month" placeholder="01">
+                </div>
+                <div class="col form-group">
+                  <label for="year">Expiration Year</label>
+                  <input type="text" class="form-control" id="year" placeholder="22">
+                </div>
+              </div>
+            </div>
+          </form>
+          <button type="submit" class="btn btn-primary">Submit Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--Jumbotron-->
     <div class="jumbotron mt-n4 text-white text-center">
@@ -93,7 +190,8 @@
           <h1>About Us</h1>
         </div>
         <div class="col-12 col-md-6">
-          <img class="specialImage aboutus" src="img/aboutus.jpg" alt="">
+          <img class="specialImage aboutus rotate" src="img/aboutus.jpg" alt="">
+          <img class="specialImage aboutus d-sm-none" src="img/aboutus.jpg" alt="">
         </div>
         <div class="col-12 col-md-6 pt-3 pt-md-0 align-self-center">
               <p class="text-justify">ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -145,7 +243,7 @@
         <div class="container p-3">
           <h3 class="text-white">Sign Up For Our Newsletter</h3>
           <form action="#" method="Post">
-            <input type="text" name="text" placeholder="Email Address" class="form-control col-md-4 offset-md-4">
+            <input type="text" name="text" placeholder="Email Address" class="form-control col-md-4 offset-md-4" required>
             <button type="button" class="btn mainButtons mt-3">Subscribe<i class="fa fa-envelope pl-1"></i></button>
           </form>
         </div>
