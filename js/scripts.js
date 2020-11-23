@@ -27,6 +27,3 @@
     setTimeout(function(){
       $("#discountModal").modal();
    }, 1000);
-
-
-   
